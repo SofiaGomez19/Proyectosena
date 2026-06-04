@@ -13,3 +13,10 @@ h2{
     text-align: center;
     color: #EAD363;
 }
+.sedes{
+    display: flex;
+    gap: 20px;
+}
+.sedes details{
+    flex: 1;
+}
