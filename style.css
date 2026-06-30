@@ -1,22 +1,436 @@
-body{
-    background-color: #161515;
-    font-family:fantasy;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', montserrat, sans-serif;
 }
-footer{
-    background-color: #161515;
+body {
+    background: #161515;
 }
-h1{
-    text-align: center;
-    color: #EAD363;
+/* header */  
+header{
+    background: #2b2a2a;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+    padding-left: 20px;
+    gap: 20px;
 }
-h2{
-    text-align: center;
-    color: #EAD363;
-}
-.sedes{
+nav{
     display: flex;
     gap: 20px;
 }
-.sedes details{
-    flex: 1;
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ead363;
+    font-size: 40px;
+    font-weight: 50px;
+    border: 2px solid transparent;
+    padding: 5px 0;
+    margin-left: 15px
+}
+img {
+    width: 63px;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+.nav-icono {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+
+
+
+ /* Carrusel1 */ 
+.slider-box {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0px auto 0;
+    overflow: hidden;
+    }
+    .slider-box ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        animation: slider 17s infinite alternate ease-in-out;
+    }
+    .slider-box li {
+        width: 25%;
+        list-style: none;
+        position: relative;
+    }
+    .slider-box img {
+        width: 100%;
+        height: 750px;
+        display: block;
+    }
+    @keyframes slider {
+        0%   { margin-left: 0; }
+        20%  { margin-left: 0; }
+
+        25%  { margin-left: -100%; }
+        45%  { margin-left: -100%; }
+
+        50%  { margin-left: -200%; }
+        70%  { margin-left: -200%; }
+
+        75%  { margin-left: -300%; }
+        100% { margin-left: -300%; }
+    }
+
+    @media(max-width: 991px) {
+
+        BODY{
+            padding: 30px;
+        }
+    }
+
+    
+    
+    
+
+
+    /* Sedes CONSOLAS*/
+    h1 {
+    color: #ead363;  
+    text-align: center; 
+    font-family: montserrat, sans-serif;
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 50px;
+    border: 2px solid transparent;
+    padding: 5px 0;
+    margin-left: 15px;
+       }
+       .contenedor-sedes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+       }
+       .bloques-sedes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    width: 100%;
+       }
+       .bloque-sede {
+    flex: 1 1 350px;
+    max-width: 350px;
+       }
+       .boton-sede {
+    width: 350px;           
+    padding-bottom: 80px;   
+    cursor: pointer;        
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;       
+    color: #e6fcf8;          
+    font-family: montserrat, sans-serif; 
+    font-size: 1.1rem;        
+    letter-spacing: 2px;       
+}
+       .flecha {
+    width: 0;
+    height: 0; 
+    border-left: 16px solid transparent; 
+    border-right: 16px solid transparent; 
+    border-bottom: 16px solid #15415C;
+     }
+.caja-logos img {
+    height: 8cap; 
+    width: auto; 
+    object-fit: contain; 
+}
+.boton-sede {
+    list-style: none;
+}
+.boton-sede::-webkit-details-marker {
+    display: none;
+}
+details[open] .flecha {
+    transform: rotate(180deg);
+}
+#consolas {
+    display: inline-block;
+    vertical-align: middle;
+}
+.icono-absoluto{
+    display: inline-block;
+    vertical-align: middle;
+    width: 115px;
+    height: auto;
+    z-index: 5;
+    margin-right: 15px;
+    margin-top: 30px;
+}
+
+
+/* Juegos populares */
+.popular {
+    padding: 100px 0;
+    text-align: center;
+}
+h2 {
+    color: #ead363;  
+    text-align: center; 
+    font-family: montserrat, sans-serif;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 50px;
+    border: 2px solid transparent;
+    padding: 10px 0;
+    margin-left: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.popular-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 55px;
+}
+.popular-content img {
+    width: 280px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.popular-content img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px #ead363;
+}
+.icono-derecho {
+    display: inline-block;
+    vertical-align: middle;
+    width: 115px; 
+    height: auto;
+    margin-left: 50px;
+}
+
+
+
+/* Imagen mascota */
+.seccion-imagen-cambiante {
+    width: 100%;
+    margin-top: 60px; 
+}
+.contenedor-imagen-hover {
+    position: relative;
+    width: 100%; 
+    overflow: hidden;
+}
+.imagen-base,
+.imagen-hover {
+    display: block; 
+    width: 100%; 
+    height: auto; 
+}
+.imagen-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.contenedor-imagen-hover:hover .imagen-hover {
+    opacity: 1;
+}
+.contenedor-imagen-hover:hover .imagen-base {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+
+
+
+/* gamepass pspro */
+.seccion-suscripciones {
+    max-width: 1200px; 
+    margin: 60px auto;  
+    padding: 20px;
+}
+.contenedor-suscripciones {
+    display: flex;
+    justify-content: space-around; 
+    gap: 350px;
+    flex-wrap: wrap; 
+}
+.tarjeta-sus {
+    width: 350px; 
+    display: flex;
+    justify-content: center;
+}
+.tarjeta-sus img {
+    width: 100%;        
+    height: auto;      
+    border-radius: 24px;
+    display: block;
+}
+
+
+
+/* Combos */
+.slider-wrapper{
+    position: relative;
+    max-width: 1900px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    overflow: hidden
+}
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 .25rem .5rem #21212126;
+    border-radius: .5rem;
+}
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    top: 0.25;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-nav a{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #ead363;
+    opacity: 65%;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover{
+    opacity: 100%;
+} 
+
+
+
+
+
+
+
+
+/* Ubicacion */
+.como-llegar {
+  background-color: #161515;
+  padding: 40px 20px;
+  font-family: 'monserrat', sans-serif; 
+  text-align: center;
+}
+.section-title {
+  color: #ead363;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 30px;
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  flex-wrap: wrap;
+}
+.sede-card {
+  background-color: #2b2a2a;
+  border-radius: 20px;
+  padding: 30px 20px 20px 20px;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sede-title {
+  color: #ead363;
+  font-size: 1.4rem;
+  margin: 0 0 8px 0;
+}
+.sede-address {
+  color: #e6fcf8;
+  font-size: 1rem;
+  margin: 0 0 20px 0;
+  opacity: 0.9;
+}
+.map-placeholder {
+  width: 100%;
+  height: 450px;
+  background-color: #2b2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.icono-ubicacion {
+  display: inline-block;
+  vertical-align: middle;
+  width: 115px;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 35px;
+}
+
+
+
+/* footer */
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+footer .social{
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+}
+footer .social a {
+    color: #ead363;
+    background-color: #000000;
+    padding: 5px;
+    border-radius: 50%
+}
+footer .nav-seccion{
+    margin-bottom: 15px;
+}
+footer .nav-section nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+footer .nav-section nav a {
+    color:#ead363;
+    font-size: 28px;
+
+}
+footer .copy{
+    padding: 15px 0;
+    background-color: #000000;
+    color: #ead363;
 }
