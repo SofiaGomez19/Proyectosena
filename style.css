@@ -155,9 +155,17 @@ nav {
     border-bottom: 16px solid #15415C;
      }
 .caja-logos img {
-    height: 8cap; 
-    width: auto; 
-    object-fit: contain; 
+    height: 8cap;
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+    transition: all .35s ease;
+}
+
+.caja-logos img:hover{
+    transform: translateY(-8px) scale(1.12);
+    filter: drop-shadow(0 0 8px #EAD363)
+            drop-shadow(0 0 18px #EAD363);
 }
 .boton-sede {
     list-style: none;
