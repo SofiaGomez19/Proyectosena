@@ -165,7 +165,7 @@ nav {
 .caja-logos img:hover{
     transform: translateY(-8px) scale(1.12);
     filter: drop-shadow(0 0 8px #EAD363)
-            drop-shadow(0 0 18px #EAD363);
+            drop-shadow(0 0 18px #EAD363); 
 }
 .boton-sede {
     list-style: none;
