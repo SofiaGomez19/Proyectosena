@@ -524,3 +524,10 @@ footer .copy{
 
 }
 
+@media (max-width:768px){
+
+.tarjetas{
+    flex-direction: column;
+}
+
+}
