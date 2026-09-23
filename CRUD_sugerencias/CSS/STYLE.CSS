@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #161515;
+    color: #fff;
+}
+
+/* TITULO PRINCIPAL */
+
+h1 {
+    margin-bottom: 30px;
+    color: #ead363;
+    text-align: center;
+    font-size: 32px;
+}
+
+/* CONTENEDORES */
+
+.sugerencia-form,
+.users-table {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    padding: 30px;
+    background: #2b2a2a;
+    border: 2px solid #ead363;
+    border-radius: 12px;
+}
+
+/* TITULOS */
+
+h2 {
+    margin-bottom: 25px;
+    color: #ead363;
+    text-align: center;
+}
+
+/* FORMULARIO */
+
+.sugerencia-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sugerencia-form input,
+.sugerencia-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #777;
+    border-radius: 6px;
+    background: #161515;
+    color: #fff;
+    font-size: 15px;
+}
+
+.sugerencia-form textarea {
+    resize: vertical;
+}
+
+.sugerencia-form input::placeholder,
+.sugerencia-form textarea::placeholder {
+    color: #aaa;
+}
+
+.sugerencia-form input:focus,
+.sugerencia-form textarea:focus {
+    outline: none;
+    border-color: #ead363;
+}
+
+/* BOTON GUARDAR */
+
+.sugerencia-form button {
+    padding: 13px;
+    border: 2px solid #ead363;
+    border-radius: 6px;
+    background: #ead363;
+    color: #161515;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sugerencia-form button:hover {
+    background: transparent;
+    color: #ead363;
+}
+
+/* TABLA */
+
+.users-table {
+    overflow-x: auto;
+}
+
+.users-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+    padding: 14px 10px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+.users-table thead {
+    background: #161515;
+}
+
+.users-table thead th {
+    color: #ead363;
+}
+
+.users-table tbody tr:hover {
+    background: #333131;
+}
+
+/* CELDA DE SUGERENCIA */
+
+.users-table td:nth-child(4) {
+    max-width: 400px;
+    word-wrap: break-word;
+}
+
+/* BOTONES */
+
+.users-table a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 3px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* EDITAR */
+
+.users-table a[href^="edit"] {
+    background: #ead363;
+    color: #161515;
+}
+
+.users-table a[href^="edit"]:hover {
+    background: transparent;
+    color: #ead363;
+    border: 1px solid #ead363;
+}
+
+/* ELIMINAR */
+
+.users-table a[href^="delete"] {
+    background: #8b2525;
+    color: #fff;
+}
+
+.users-table a[href^="delete"]:hover {
+    background: #b83232;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .sugerencia-form,
+    .users-table {
+        padding: 20px;
+    }
+
+    .users-table th,
+    .users-table td {
+        padding: 10px 6px;
+        font-size: 13px;
+    }
+
+}

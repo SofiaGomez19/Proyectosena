@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px;
+    background: #161515;
+    color: #fff;
+}
+
+
+
+.users-form,
+.users-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 30px;
+    background: #2b2a2a;
+    border: 2px solid #ead363;
+    border-radius: 12px;
+}
+
+
+
+h1 {
+    margin-bottom: 25px;
+    color: #ead363;
+    text-align: center;
+    font-size: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #ead363;
+    text-align: center;
+}
+
+
+
+.users-form form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.users-form input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #777;
+    border-radius: 6px;
+    background: #161515;
+    color: #fff;
+    font-size: 15px;
+}
+
+.users-form input::placeholder {
+    color: #aaa;
+}
+
+.users-form input:focus {
+    outline: none;
+    border-color: #ead363;
+}
+
+
+
+.users-form input[type="submit"] {
+    grid-column: 1 / -1;
+    background: #ead363;
+    color: #161515;
+    border: 2px solid #ead363;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.users-form input[type="submit"]:hover {
+    background: transparent;
+    color: #ead363;
+}
+
+
+
+.users-table {
+    overflow-x: auto;
+}
+
+.users-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+    padding: 14px 10px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+.users-table thead {
+    background: #161515;
+}
+
+.users-table thead th {
+    color: #ead363;
+    font-weight: bold;
+}
+
+.users-table tbody tr:hover {
+    background: #333131;
+}
+
+
+
+.users-table a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 3px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+.users-table--edit {
+    color: #161515;
+    background: #ead363;
+}
+
+.users-table--edit:hover {
+    background: transparent;
+    color: #ead363;
+    border: 1px solid #ead363;
+}
+
+
+
+.users-table--delete {
+    color: #fff;
+    background: #8b2525;
+}
+
+.users-table--delete:hover {
+    background: #b83232;
+}
+
+
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .users-form,
+    .users-table {
+        padding: 20px;
+    }
+
+    .users-form form {
+        grid-template-columns: 1fr;
+    }
+
+    .users-table th,
+    .users-table td {
+        padding: 10px 6px;
+        font-size: 13px;
+    }
+
+}

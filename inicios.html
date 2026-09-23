@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Zybyn Gaming</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: #161515;
+            color: #fff;
+        }
+
+        .login-contenedor {
+            width: 100%;
+            max-width: 450px;
+            padding: 35px;
+            background: #2b2a2a;
+            border: 2px solid #ead363;
+            border-radius: 12px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #ead363;
+            text-align: center;
+        }
+
+        .descripcion {
+            margin-bottom: 25px;
+            color: #ddd;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 6px;
+            color: #ead363;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #777;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            border: 2px solid #ead363;
+            border-radius: 6px;
+            background: #ead363;
+            color: #161515;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+       button:hover {
+            background: transparent;
+            color: #ead363;
+        }
+    </style>
+</head>
+<body>
+    <main class="login-contenedor">
+        <h1>Iniciar sesión</h1>
+        <p class="descripcion">Accede a tu cuenta de Zybyn Gaming</p>
+
+        <form action="iniciosesion.php" method="POST">
+
+    <label for="correo">Correo electrónico</label>
+    <input type="email" id="correo" name="correo" required>
+
+    <label for="contrasena">Contraseña</label>
+    <input type="password" id="contrasena" name="contrasena" required>
+
+    <button type="submit">Entrar</button>
+
+</form>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del juego</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="detalle-body">
+    <main class="detalle-page">
+        <a class="btn-volver" href="index.html">Volver</a>
+
+        <section class="detalle-layout">
+            <div class="detalle-panel detalle-panel-cover">
+                <img id="game-cover" class="detalle-cover" src="" alt="">
+
+                <div class="detalle-info">
+                    <h1 id="game-title"></h1>
+                    <p id="game-description"></p>
+                </div>
+            </div>
+
+            <aside class="detalle-panel detalle-video-panel">
+                <div class="detalle-video-wrapper">
+                    <iframe
+                        id="game-video"
+                        src=""
+                        title="Trailer del juego"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="detalle-meta">
+                    <h2>Detalles del juego</h2>
+                    <ul>
+                        <li><strong>Género:</strong> <span id="game-genre"></span></li>
+                        <li><strong>Plataforma:</strong> <span id="game-platform"></span></li>
+                        <li><strong>Modo:</strong> <span id="game-mode"></span></li>
+                        <li><strong>Edad:</strong> <span id="game-age"></span></li>
+                        <li><strong>Jugadores:</strong> <span id="game-players"></span></li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <script>
+        const games = {
+            fortnite: {
+                title: 'Fortnite',
+                cover: 'TODASIMAGENES/PortadasJ/fortnite.jpg',
+                description: 'Fortnite es un juego de batalla real en línea donde hasta 100 jugadores compiten para ser el último en pie. Combina acción intensa, construcción estratégica y eventos especiales que hacen cada partida dinámica y emocionante.',
+                video: 'https://www.youtube.com/embed/XttzpWhoQCE',
+                genre: 'Battle Royale',
+                platform: 'PC, PlayStation, Xbox',
+                mode: 'Cooperativo y competitivo',
+                age: '12+',
+                players: '1 a 4'
+            },
+            godofwar: {
+                title: 'God of War',
+                cover: 'TODASIMAGENES/PortadasJ/godofwar.jpg',
+                description: 'God of War sigue la historia de Kratos en una aventura épica llena de acción, mitología nórdica y grandes momentos emocionales. Con combates intensos y una narrativa poderosa, ofrece una experiencia cinematográfica y cautivadora.',
+                video: 'https://www.youtube.com/embed/UEIqHfLggaA',
+                genre: 'Acción / Aventura',
+                platform: 'PlayStation, PC',
+                mode: 'Historia y exploración',
+                age: '18+',
+                players: '1 jugador'
+            },
+            lol: {
+                title: 'League of Legends',
+                cover: 'TODASIMAGENES/PortadasJ/lol.jpg',
+                description: 'League of Legends es un juego de estrategia en equipo donde dos equipos compiten por destruir la base enemiga. Cada partida exige coordinación, planificación y dominio de personajes con habilidades únicas.',
+                video: 'https://www.youtube.com/embed/p4QG59y6FGE',
+                genre: 'MOBA / Estrategia',
+                platform: 'PC',
+                mode: 'Online competitivo',
+                age: '12+',
+                players: '5v5'
+            },
+            mortalkombat: {
+                title: 'Mortal Kombat',
+                cover: 'TODASIMAGENES/PortadasJ/mortalkombat.jpg',
+                description: 'Mortal Kombat ofrece peleas brutales, combos impactantes y un estilo visual muy intenso. Es ideal para quienes disfrutan del combate directo, la rivalidad y las habilidades especiales.',
+                video: 'https://www.youtube.com/embed/0HEE78L_CnA',
+                genre: 'Peleas',
+                platform: 'PC, PlayStation, Xbox',
+                mode: 'Versus',
+                age: '18+',
+                players: '1 a 2'
+            },
+            halo: {
+                title: 'Halo',
+                cover: 'TODASIMAGENES/PortadasJ/halo.jpg',
+                description: 'Halo combina acción en primera persona con una historia épica y una gran variedad de modos de juego. Está pensado para jugadores que buscan acción, estrategia y aventura espacial.',
+                video: 'https://www.youtube.com/embed/7oETYzF27lQ',
+                genre: 'Shooter',
+                platform: 'Xbox, PC',
+                mode: 'Multijugador y campaña',
+                age: '12+',
+                players: '1 a 4'
+            },
+            roblox: {
+                title: 'Roblox',
+                cover: 'TODASIMAGENES/PortadasJ/roblox.jpg',
+                description: 'Roblox es una plataforma creativa donde los jugadores pueden explorar mundos, jugar minijuegos y crear experiencias propias. Tiene algo para todos los gustos y estilos de juego.',
+                video: 'https://www.youtube.com/embed/QvWer1xEmOE',
+                genre: 'Plataforma / Social',
+                platform: 'PC, PlayStation, Xbox',
+                mode: 'Multijugador',
+                age: '7+',
+                players: '1 a 10'
+            },
+            fifa: {
+                title: 'FIFA',
+                cover: 'TODASIMAGENES/PortadasJ/fifa.jpg',
+                description: 'FIFA ofrece la experiencia del fútbol más realista con equipos, torneos y modos competitivos. Es perfecto para aficionados al deporte y para partidas rápidas entre amigos.',
+                video: 'https://www.youtube.com/embed/MU4HWZlJldk',
+                genre: 'Deportes',
+                platform: 'PC, PlayStation, Xbox',
+                mode: 'Competitivo y amistoso',
+                age: '3+',
+                players: '1 a 4'
+            },
+            callofduty: {
+                title: 'Call of Duty',
+                cover: 'TODASIMAGENES/PortadasJ/callofdutyblack.jpg',
+                description: 'Call of Duty ofrece acción intensa, armas potentes y partidas multijugador altamente competitivas. Es una experiencia ideal para quienes disfrutan del shooter moderno.',
+                video: 'https://www.youtube.com/embed/Qop1sH70nHI',
+                genre: 'Shooter',
+                platform: 'PC, PlayStation, Xbox',
+                mode: 'Multijugador y campaña',
+                age: '18+',
+                players: '1 a 4'
+            },
+            valorant: {
+                title: 'Valorant',
+                cover: 'TODASIMAGENES/PortadasJ/valorant.jpg',
+                description: 'Valorant mezcla estrategia, precisión y habilidad con un estilo competitivo muy dinámico. Cada partida se decide por coordinación, reflejos y buena ejecución de equipo.',
+                video: 'https://www.youtube.com/embed/2LnFuREmbpk',
+                genre: 'FPS / Táctico',
+                platform: 'PC',
+                mode: 'Competitivo',
+                age: '16+',
+                players: '5v5'
+            },
+            gta: {
+                title: 'GTA',
+                cover: 'TODASIMAGENES/PortadasJ/gta.jpg',
+                description: 'GTA ofrece libertad total para explorar, conducir, completar misiones y vivir una ciudad llena de acción, caos y oportunidades. Es una experiencia abierta de alto nivel.',
+                video: 'https://www.youtube.com/embed/X0LsxLg9_ao',
+                genre: 'Acción / Mundo abierto',
+                platform: 'PC, PlayStation, Xbox',
+                mode: 'Historia y libre exploración',
+                age: '18+',
+                players: '1 jugador'
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const gameKey = params.get('game') || 'fortnite';
+        const game = games[gameKey] || games.fortnite;
+
+        document.getElementById('game-cover').src = game.cover;
+        document.getElementById('game-cover').alt = 'Portada de ' + game.title;
+        document.getElementById('game-title').textContent = game.title;
+        document.getElementById('game-description').textContent = game.description;
+        document.getElementById('game-video').src = game.video;
+        document.getElementById('game-video').title = 'Trailer de ' + game.title;
+        document.getElementById('game-genre').textContent = game.genre;
+        document.getElementById('game-platform').textContent = game.platform;
+        document.getElementById('game-mode').textContent = game.mode;
+        document.getElementById('game-age').textContent = game.age;
+        document.getElementById('game-players').textContent = game.players;
+    </script>
+</body>
+</html>

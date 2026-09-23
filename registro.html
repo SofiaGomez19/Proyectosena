@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Zybyn Gaming</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: #161515;
+            color: #fff;
+        }
+
+        .registro-contenedor {
+            width: 100%;
+            max-width: 450px;
+            padding: 35px;
+            background: #2b2a2a;
+            border: 2px solid #ead363;
+            border-radius: 12px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #ead363;
+            text-align: center;
+        }
+
+        .descripcion {
+            margin-bottom: 25px;
+            color: #ddd;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 6px;
+            color: #ead363;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #777;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            border: 2px solid #ead363;
+            border-radius: 6px;
+            background: #ead363;
+            color: #161515;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+    <main class="registro-contenedor">
+        <h1>Crear una cuenta</h1>
+        <p class="descripcion">Regístrate en Zybyn Gaming</p>
+
+        <form action="registro.php" method="POST">
+    <label>Usuario</label>
+    <input type="text" name="usuario" required>
+
+    <label>Correo Electrónico</label>
+    <input type="email" name="correo_electronico" required>
+
+    <label>Contraseña</label>
+    <input type="password" name="contrasena" required>
+
+    <label>Confirmar Contraseña</label>
+    <input type="password" name="confirmar_contrasena" required>
+
+    <button type="submit">Registrarse</button>
+</form>
+    </main>
+</body>
+</html>
